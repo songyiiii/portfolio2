@@ -35,7 +35,7 @@ const Section1 = ({ onMouseEnterText, onMouseLeave }) => {
                     start: 'top top', // 
                     end: 'bottom 30%',
                     scrub: true,
-                    markers:true
+                    // markers:true
                 },
             }
         );

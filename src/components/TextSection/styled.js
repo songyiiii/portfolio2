@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TextSectionStyled = styled.div`
 width: 100vw;
-height: 60vh;
+height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;

@@ -92,9 +92,9 @@ const SkillSection = ({ onMouseEnterText, onMouseLeave }) => {
             //h1요소(애니메이션이 적용될 요소)
             titleRef.current,
             //초기상태
-            { fontSize: '10rem' },
+            { fontSize: '8rem' },
             {
-                fontSize: '8rem', //스크롤할때 글씨가 작아짐
+                fontSize: '6rem', //스크롤할때 글씨가 작아짐
                 duration: 3, //애니메이션 3초간 진행
                 ease: 'power2.inOut', //부드러운 애니메이션 효과 (inout: 양쪽에서 부드럽게 시작하고 끝나는 애니메이션)
                 scrollTrigger: {
@@ -105,11 +105,6 @@ const SkillSection = ({ onMouseEnterText, onMouseLeave }) => {
                     scrub: true, //스크롤할때 애니메이션이 스크롤 속도에 맞춰 재생
                     // markers: true, 
                     onEnter: () => {
-                        // gsap.to(titleRef.current, {
-                        //     fontSize: '10rem', // 스크롤이 끝날 때 폰트 크기를 10rem으로 설정
-                        //     duration: 3,
-                        //     ease: 'power2.out',
-                        // });
                         //스크롤이 섹션에 들어왔을때 실행되는 코드
                         // Matter.js 물리 엔진을 초기화하고 물리효과 실행
                         const {

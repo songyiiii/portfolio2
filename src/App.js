@@ -7,6 +7,7 @@ import Header from './components/Header';
 import SkillSection from './components/SkillSection';
 import MainSection from './components/MainSection';
 import ProjectSection from './components/ProjectSection';
+import Contact from './components/Contact';
 
 function App() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -65,12 +66,9 @@ function App() {
                 onMouseLeave={handleMouseLeave}
                 onMouseEnterLink={handleMouseEnterLink}
             />
-            {/* <Section3
-                onMouseEnterText={handleMouseEnterText}
-                onMouseLeave={handleMouseLeave}
-                onMouseEnterLink={handleMouseEnterLink}
-            /> */}
+
             <ProjectSection />
+            <Contact />
         </div>
     );
 }

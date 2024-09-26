@@ -1,69 +1,53 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { project } from '../../utill/data';
 import { ProjectSectionStyled } from './styled';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectSection = () => {
-  const cardsRef = useRef([]);
+    const sectionRefs = useRef([]); // 각 섹션을 참조하는 배열
+console.log(project)
 
-  useEffect(() => {
-    const [card1, card2] = cardsRef.current;
 
-    // 첫 번째 카드 고정 및 두 번째 카드 덮기 설정
-    gsap.to(card1, {
-      scrollTrigger: {
-        trigger: card1,
-        start: 'top top',
-        end:'+=100%',
-        pin: true,
-        pinSpacing: false,  // 고정된 상태에서의 간격 제거
-        markers: true, // 디버그용 마커
-        scrub: 1,
-      },
-    });
+    useEffect(() => {
+        const panels = sectionRefs.current;
 
-    // 두 번째 카드가 첫 번째 카드를 덮는 애니메이션
-    gsap.to(card2, {
-      yPercent: -90, // 두 번째 카드가 첫 번째 카드를 90% 덮음
-      ease: 'none',
-      scrollTrigger: {
-        trigger: card2,
-        start: 'top top',  // 두 번째 카드가 80% 지점에 도달하면 애니메이션 시작
-        end: '+=100%',    // 두 번째 카드가 상단에 도달하면 애니메이션 종료
-        scrub: 1,
-        pin: true,
-        pinSpacing: false, // 고정된 상태에서의 간격 제거
-        markers: true, // 디버그용 마커
-      },
-    });
-  }, []);
+        panels.forEach((panel) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: 'top top',
+                pin: true,
+                pinSpacing: false,
+                markers: true, // 디버깅을 위한 마커
+            });
+        });
 
-  return (
-    <ProjectSectionStyled>
-      <div
-        className="parallax_item section1"
-        ref={(el) => (cardsRef.current[0] = el)} // 첫 번째 카드 참조
-      >
-        <a>
-          <span className="parallax_item_num">01</span>
-          <img className="parallax_item_img" alt="Section 1" />
-          <h1 className="parallax_item_title">Title 1</h1>
-        </a>
-      </div>
-      <div
-        className="parallax_item section2"
-        ref={(el) => (cardsRef.current[1] = el)} // 두 번째 카드 참조
-      >
-        <a>
-          <span className="parallax_item_num">02</span>
-          <img className="parallax_item_img" alt="Section 2" />
-          <h1 className="parallax_item_title">Title 2</h1>
-        </a>
-      </div>
-    </ProjectSectionStyled>
-  );
+        // ScrollTrigger가 중복 실행되지 않도록 리턴 시 cleanup
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+
+    return (
+        <ProjectSectionStyled>
+            <div className="parallax__cont">
+                {project.map((x, i) => (
+
+                    <div
+                        key={i}
+                        className={`parallax__item ${x.className}`}
+                        ref={(el) => (sectionRefs.current[i] = el)}
+                    >
+                        <span className="parallax__item__num">{x.id}</span>
+                        <div className="parallax__item__img"></div>
+                        <h2 className="parallax__item__title">{x.name}</h2>
+                    </div>
+                ))}
+            </div>
+        </ProjectSectionStyled>
+    );
 };
 
 export default ProjectSection;
