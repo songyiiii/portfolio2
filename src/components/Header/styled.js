@@ -9,6 +9,8 @@ export const HeaderStyled = styled.div`
     padding: 10px 20px;
     color: white;
     mix-blend-mode: difference; /* 텍스트가 배경에 따라 색이 바뀜 */
+    /* font-family: 'HANBatang';
+    font-weight: bold; */
     a {
         color: inherit;
         text-decoration: none;
@@ -20,6 +22,9 @@ export const HeaderStyled = styled.div`
             text-align: left;
             width: 15%;
             font-size: 1.3rem;
+            a {
+                color: white !important;
+            }
         }
         ul {
             display: flex;

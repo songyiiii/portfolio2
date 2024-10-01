@@ -8,11 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectSection = () => {
     const sectionRefs = useRef([]); // 각 섹션을 참조하는 배열
-console.log(project)
-
 
     useEffect(() => {
         const panels = sectionRefs.current;
+        console.log(panels, 'dfdf');
 
         panels.forEach((panel) => {
             ScrollTrigger.create({
@@ -20,11 +19,10 @@ console.log(project)
                 start: 'top top',
                 pin: true,
                 pinSpacing: false,
-                markers: true, // 디버깅을 위한 마커
             });
         });
 
-        // ScrollTrigger가 중복 실행되지 않도록 리턴 시 cleanup
+
         return () => {
             ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         };
@@ -32,17 +30,21 @@ console.log(project)
 
     return (
         <ProjectSectionStyled>
-            <div className="parallax__cont">
+            <div className="parallax_cont">
                 {project.map((x, i) => (
-
                     <div
                         key={i}
-                        className={`parallax__item ${x.className}`}
+                        className={`parallax_item ${x.className}`}
                         ref={(el) => (sectionRefs.current[i] = el)}
                     >
-                        <span className="parallax__item__num">{x.id}</span>
-                        <div className="parallax__item__img"></div>
-                        <h2 className="parallax__item__title">{x.name}</h2>
+                        <div className="parallax_img">
+                            <a href={x.link}>
+                                <img src={x.img}></img>
+                            </a>
+                        </div>
+                        <div className="parallax_title">
+                        <span>{x.id}</span><p className='name'>{x.name}</p>
+                        </div>
                     </div>
                 ))}
             </div>

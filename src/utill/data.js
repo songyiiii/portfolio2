@@ -22,35 +22,21 @@ const skillImg = [
 const project = [
     {
         id: '01',
-        name: 'Arts',
-        className: 'section1',
+        name: 'Auction Chance',
         img: arts1,
-        personnel: '1인 프로젝트',
-        period: '2 weeks',
-        info: ['온라인 미술 거래 플랫폼', '미술품 판매 및 전시회 홍보 목적'],
+        personnel: '4인 프로젝트',
+        period: '3 weeks',
+        info:   ['PLATFORM Used Auction','중고상품 경매 플랫폼'],
         tag: ['react', 'next.js', 'typescript', 'swiper', 'antd'],
         link: 'http://3.38.151.32:3000/',
     },
     {
         id: '02',
         name: 'Arts',
-        className: 'section2',
-
         img: arts1,
         personnel: '1인 프로젝트',
         period: '2 weeks',
-        info: ['온라인 미술 거래 플랫폼', '미술품 판매 및 전시회 홍보 목적'],
-        tag: ['react', 'next.js', 'typescript', 'swiper', 'antd'],
-    },
-    {
-        id: '03',
-        name: 'Arts',
-        className: 'section1',
-
-        img: arts1,
-        personnel: '1인 프로젝트',
-        period: '2 weeks',
-        info: ['온라인 미술 거래 플랫폼', '미술품 판매 및 전시회 홍보 목적'],
+        info: ['PLATFORM Buy Art Online','미술상품 온라인 거래 플랫폼'],
         tag: ['react', 'next.js', 'typescript', 'swiper', 'antd'],
     },
 ];

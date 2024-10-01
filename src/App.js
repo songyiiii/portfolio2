@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
-import Section1 from './components/Section1';
-import Section3 from './components/Section3';
 import Header from './components/Header';
 import SkillSection from './components/SkillSection';
-import MainSection from './components/MainSection';
-import ProjectSection from './components/ProjectSection';
-import Contact from './components/Contact';
+import Profile from './components/Profile';
+import Project from './components/Project';
+import Main from './components/Main';
+import Title from './components/Title';
+import About from './components/About';
 
 function App() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -53,22 +53,18 @@ function App() {
                 onMouseEnterText={handleMouseEnterText}
                 onMouseLeave={handleMouseLeave}
             />
-            <MainSection
-                onMouseEnterText={handleMouseEnterText}
-                onMouseLeave={handleMouseLeave}
-            />
-            <Section1
-                onMouseEnterText={handleMouseEnterText}
-                onMouseLeave={handleMouseLeave}
-            />
+            <Title />
+            <Profile />
+
             <SkillSection
                 onMouseEnterText={handleMouseEnterText}
                 onMouseLeave={handleMouseLeave}
                 onMouseEnterLink={handleMouseEnterLink}
             />
-
-            <ProjectSection />
-            <Contact />
+            <Project />
+            {/* <MainSection /> */}
+            
+            <Main />
         </div>
     );
 }

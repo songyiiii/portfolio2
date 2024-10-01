@@ -34,10 +34,11 @@ const MainSection = ({ onMouseEnterText, onMouseLeave }) => {
                     end: 'bottom top',
                     //scrub:true -> 애니메이션이 스크롤 속도랑 연동되어서 부드럽게 진행
                     //스크롤이 멈추면 애니메이션도 멈추고 스크롤을 되돌리면 애니메이션도 되돌아감
-                    // scrub: 0.5,
+                    // scrub: 1,
                     //pin:true -> 스크롤시 해당 섹션을 화면에 고정
                     //스크롤을 해도 화면이 해당 섹션에 머물도록 함
                     // pin: true,
+                    // pinSpacing:true,
                     // endTrigger: '.some-element-below-mainsection', // pin 고정이 끝나는 시점을 지정
                     // markers: true, // 디버깅을 위한 마커 활성화
                 },
