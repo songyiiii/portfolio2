@@ -36,6 +36,11 @@ export const HeaderStyled = styled.div`
                     padding: 10px 40px;
                 }
             }
+            .active {
+                border-bottom: 1px solid white;
+                mix-blend-mode: difference;
+                
+            }
         }
     }
 `;

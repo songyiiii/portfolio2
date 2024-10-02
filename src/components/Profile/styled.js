@@ -5,60 +5,68 @@ export const ProfileStyled = styled.div`
     padding: 0 20px;
 
     .parallax__item {
-        height: 60vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: black;
+        color: white;
+        position: relative;
+        overflow: hidden;
+
         h2 {
             font-size: 5rem;
+            -webkit-text-stroke: 1px white;
         }
+
         .content {
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9); 
+            color: black;
+            display: flex ;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+            text-align: center;
             p {
                 margin-bottom: 20px;
+                padding: 10px;
+                background-color: black;
+                color: white;
                 span {
                     display: block;
                 }
             }
         }
+
+        &:hover .content {
+            left: 0; /* hover 시 content가 왼쪽에서 들어옴 */
+        }
     }
-    .item1 {
+    .item2, .item3 {
         .content {
-            display: flex;
+            flex-direction: column;
+        }
+    }
+    .item1 ,.item4 {
+        .content {
             p {
-                background-color: rgba(0, 0, 0, 0.3);
-                color: white;
-                border-radius: 50%;
-                display: inline-block;
                 width: 100px;
                 height: 100px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                margin-right: 20px;
-                animation: wave 2s infinite ease-in-out; /* 2초 동안 무한 반복 */
-                &:nth-of-type(1) {
-                    animation-delay: 0s;
-                }
-                &:nth-of-type(2) {
-                    animation-delay: 0.4s;
-                }
-                &:nth-of-type(3) {
-                    animation-delay: 0.8s;
-                }
+                align-items: center;
+                margin-right: 10px;
             }
-            
-        }
-    }
-    @keyframes wave {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(10px); /* 위로 10px 이동 */
-        }
-        100% {
-            transform: translateY(0); /* 원래 위치로 돌아옴 */
         }
     }
 `;

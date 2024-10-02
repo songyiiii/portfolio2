@@ -27,7 +27,7 @@ const project = [
         personnel: '4인 프로젝트',
         period: '3 weeks',
         info:   ['PLATFORM Used Auction','중고상품 경매 플랫폼'],
-        tag: ['react', 'next.js', 'typescript', 'swiper', 'antd'],
+        tag: ['node.js', 'swiper', ],
         link: 'http://3.38.151.32:3000/',
     },
     {

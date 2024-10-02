@@ -26,10 +26,10 @@ const Profile = () => {
             const spans = h2.querySelectorAll('span');
             gsap.fromTo(
                 spans,
-                { color: '#bbb' }, // 초기 색상
+                { color: 'black' }, // 초기 색상
                 {
-                    color: 'black', // 스크롤에 따라 변할 색상
-                    stagger: 0.05, // 글자마다 차례대로 애니메이션 적용
+                    color: 'white', // 스크롤에 따라 변할 색상
+                    stagger: 0.1, // 글자마다 차례대로 애니메이션 적용
                     scrollTrigger: {
                         trigger: item,
                         start: 'top 80%',
@@ -73,7 +73,6 @@ const Profile = () => {
                 <div className="content">
                     <p>한송이</p>
                     <p>1995.04.08</p>
-                    <p>ISTP</p>
                 </div>
             </div>
             <div className="parallax__item item2">
@@ -99,6 +98,21 @@ const Profile = () => {
                         <span>2023.02 - 2024.03</span>포도수원인계점(와인샵
                         운영)
                     </p>
+                </div>
+            </div>
+            <div className="parallax__item item4">
+                <h2>Skills</h2>
+                <div className="content">
+                    <p>Node.js</p>
+                    <p>React</p>
+                    <p>TypeScript</p>
+                    <p>Next.js</p>
+                    <p>matter.js</p>
+                    <p>GSAP</p>
+                    <p>Swiper</p>
+                    <p>Ant Design</p>
+                    <p>MySql</p>
+                    <p>aws</p>
                 </div>
             </div>
         </ProfileStyled>

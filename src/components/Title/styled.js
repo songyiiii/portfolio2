@@ -3,18 +3,24 @@ import styled from 'styled-components';
 export const TitleStyled = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-
+    background-color: white;
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
     .shine {
         background: linear-gradient(
             to right,
             #4d4d4d 0%,
-            white 50%,
+            #dcdcdc 50%,
             #4d4d4d 100%
         );
         background-size: 200% auto; /* 배경 크기 설정 */

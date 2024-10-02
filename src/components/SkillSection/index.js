@@ -55,7 +55,7 @@ const SkillSection = ({ onMouseEnterText, onMouseLeave }) => {
         //첫번째인자: x좌표 -> 화면의너비를 2로 나눠서 바닥의 중심이 화면의 가운데에 위치하게함
         clientWidth / 2,
         //두번째인자: y좌표 -> 화면 하단에서 50px위에 바닥을 배치하기위해 설정
-        clientHeight  ,
+        clientHeight ,
         //세번째인자: 바닥의 너비 -> 화면의 전체너비
         clientWidth,
         //네번째인자: 바닥의 높이 
@@ -179,12 +179,6 @@ const SkillSection = ({ onMouseEnterText, onMouseLeave }) => {
                         });
 
                         Render.run(render);
-                    },
-                    onLeave: () => {
-                        // 섹션을 벗어나면 Matter.js 엔진 중지 및 정리
-                        if (engine) {
-                            Matter.Engine.clear(engine);
-                        }
                     },
                 },
             }
