@@ -7,6 +7,8 @@ import Header from './components/Header';
 import Profile from './components/Profile';
 import Title from './components/Title';
 import Project from './components/Section3';
+import Contact from './components/Contact';
+import Footer from './components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 function App() {
@@ -92,8 +94,8 @@ function App() {
             <Title />
             <Profile />
             <Project />
-            
-            
+            <Contact />
+            <Footer />
             
         </div>
     );

@@ -7,8 +7,7 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 padding: 0 20px;
-/* background-color: black; */
-/* color: white; */
+background-color: white;
 h1 {
 
     font-size: 6rem;
@@ -16,19 +15,12 @@ h1 {
     display: flex;
     align-items: center;
 }
-.contactText {
-    height: 100%;
+.icons {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    p {
-        /* border-bottom: 1px solid black; */
-        font-size: 2rem;
-        line-height: 2;
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    font-size: 5rem;
+    a {
+        margin-right: 20px;
     }
 }
+
 `

@@ -1,13 +1,18 @@
-import { ContactStyled } from "./styled"
+import { ContactStyled } from './styled';
+import { SiNotion } from 'react-icons/si';
+import { FaGithub } from 'react-icons/fa';
+import { IoIosMail } from "react-icons/io";
 
 const Contact = () => {
-    return (<ContactStyled>
-        <h1>Contact</h1>
-        {/* <div className="contactText">
-            <p>gksthddl43@gmail.com</p>
-            <p>010-4255-6927</p>
-            <p><a href="https://github.com/songyiiii?tab=repositories">github</a></p>
-        </div> */}
-    </ContactStyled>)
-}
-export default Contact
+    return (
+        <ContactStyled>
+            <h1>Contact</h1>
+            <div className="icons">
+                <a> <FaGithub /></a>
+                <a><SiNotion /></a>
+                <a><IoIosMail /></a>
+            </div>
+        </ContactStyled>
+    );
+};
+export default Contact;
