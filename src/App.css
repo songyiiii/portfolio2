@@ -6,6 +6,10 @@
     margin: 0;
     -ms-overflow-style: none;
 }
+body,
+html {
+    overflow-x: hidden;
+}
 @font-face {
     font-family: 'HSBombaram';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff')
@@ -15,13 +19,15 @@
 }
 @font-face {
     font-family: 'SUIT-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2')
+        format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'HANBatang';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/HANBatang.woff') format('woff');
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/HANBatang.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }

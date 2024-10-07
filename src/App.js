@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { act, useEffect, useState, useRef } from 'react';
+import {  useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Header from './components/Header';
@@ -39,35 +38,6 @@ function App() {
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
-    //아직 미사용
-    useEffect(() => {
-        ScrollTrigger.create({
-            trigger: profileRef.current,
-            start: 'top top',
-            end: 'bottom bottom',
-            onEnter: () => setActiveSection('about'),
-            onLeaveBack: () => setActiveSection(''), // Profile 섹션을 벗어나면 초기화
-            // markers:true
-        });
-        ScrollTrigger.create({
-            trigger: projectRef.current, // Section3 섹션의 클래스
-            start: 'top top',
-            end: 'bottom bottom',
-            onEnter: () => setActiveSection('project'), // Section3이 뷰포트에 들어오면 project 메뉴 활성화
-            onLeaveBack: () => setActiveSection(''), // Section3 섹션을 벗어나면 초기화
-        });
-        ScrollTrigger.create({
-            trigger: contactRef.current,
-            start: 'top top',
-            end: 'bottom bottom',
-            onEnter: () => setActiveSection('contact'),
-            onLeaveBack: () => setActiveSection(''),
-        });
-        return () => {
-            ScrollTrigger.killAll(); // 컴포넌트 언마운트 시 ScrollTrigger 정리
         };
     }, []);
 
@@ -121,7 +91,7 @@ function App() {
             />
             <Title />
             <Profile ref={profileRef} />
-            <Project ref={projectRef} />
+            <Project ref={projectRef} handleMouseEnterLink={handleMouseEnterLink} handleMouseLeave={handleMouseLeave}/>
             <Contact ref={contactRef} />
             <Footer />
         </div>

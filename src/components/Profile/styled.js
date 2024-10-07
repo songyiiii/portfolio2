@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ProfileStyled = styled.div`
     background-color: white;
-    padding: 0 20px;
-    height: 160vh;
+    padding: 0 20px 50px 20px;
+
     .parallax__item {
         height: 40vh;
         display: flex;
@@ -55,11 +55,6 @@ export const ProfileStyled = styled.div`
             left: 0; /* hover 시 content가 왼쪽에서 들어옴 */
         }
     }
-    /* .item2, .item3 {
-        .content {
-            flex-direction: column;
-        }
-    } */
     .item1,
     .item4 {
         .content {
@@ -70,6 +65,39 @@ export const ProfileStyled = styled.div`
                 justify-content: center;
                 align-items: center;
                 margin-right: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        height: 100vh;
+        .parallax__item {
+            height: 20vh;
+            h2 {
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+            .content {
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        height: 160vh;
+        .parallax__item {
+            height: 35vh;
+            h2 {
+                span {
+                    font-size: 3rem;
+                }
+            }
+            .content {
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 3px;
+                }
             }
         }
     }

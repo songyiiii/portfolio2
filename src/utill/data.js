@@ -1,25 +1,7 @@
 import arts1 from '../image/arts1.png';
 import auction from '../image/auction.png'
-import node from '../image/node.jpg';
-import next from '../image/next.png';
-import typescript from '../image/typescript.jpg';
-import react from '../image/react.jpg';
-import aws from '../image/aws.png';
-import swiper from '../image/swiper.png';
-import mysql from '../image/mysql.png';
-import gsapimg from '../image/gsap.png';
-import matterimg from '../image/matter.png';
-const skillImg = [
-    node,
-    next,
-    typescript,
-    react,
-    aws,
-    swiper,
-    mysql,
-    gsapimg,
-    matterimg,
-];
+import auctionlogo from '../image/logo.png'
+
 const project = [
     {
         id: '01',
@@ -27,8 +9,8 @@ const project = [
         img: auction,
         personnel: '4인 프로젝트',
         period: '3 weeks',
-        info:   ['PLATFORM Used Auction','중고상품 경매 플랫폼'],
-        tag: ['node.js', 'swiper', ],
+        info:   '중고상품 경매 플랫폼',
+        tag: ['node.js', 'ejs', 'css' ],
         link: 'http://43.203.118.59/',
     },
     {
@@ -37,8 +19,8 @@ const project = [
         img: arts1,
         personnel: '1인 프로젝트',
         period: '2 weeks',
-        info: ['PLATFORM Buy Art Online','미술상품 온라인 거래 플랫폼'],
-        tag: ['react', 'next.js', 'typescript', 'swiper', 'antd'],
+        info: '미술상품 온라인 거래 플랫폼',
+        tag: ['react', 'next.js', 'typescript', 'styled-components'],
         link:'http://3.38.151.32:3000/'
     },
 ];
@@ -54,4 +36,4 @@ const profileData = [
     }
 ]
 
-export { project, skillImg , profileData};
+export { project , profileData};

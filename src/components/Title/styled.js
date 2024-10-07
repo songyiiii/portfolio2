@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const TitleStyled = styled.div`
     width: 100%;
     height: 100vh;
-    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: white;
+    overflow-x: hidden; 
     h1 {
         font-size: 3rem;
     }
@@ -39,5 +39,25 @@ export const TitleStyled = styled.div`
         100% {
             background-position: 200% 0;
         }
+    }
+    @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    }
+    @media screen and (min-width: 1025px) {
     }
 `;

@@ -40,4 +40,34 @@ export const HeaderStyled = styled.div`
             }
         }
     }
+    @media screen and (max-width: 480px) {
+        nav {
+            align-items: start;
+            ul {
+                text-align: right;
+                display: block;
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        nav {
+            align-items: start;
+            ul {
+                text-align: right;
+                display: block;
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
 `;

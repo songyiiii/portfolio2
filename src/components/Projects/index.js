@@ -13,26 +13,42 @@ const Projects = React.forwardRef(({ onMouseLeave, onMouseEnterLink }, ref) => {
         if (!container) return;
 
         // 가로 스크롤 값 계산
-        const scrollDistance = container.scrollWidth - container.clientWidth;
+        const setupScrollAnimation = () => {
+            const scrollDistance = container.scrollWidth - container.clientWidth;
 
-        const pin = gsap.fromTo(
-            container,
-            { translateX: 0 }, // 처음 상태 (왼쪽 끝에서 시작)
-            {
-                translateX: -scrollDistance, // 스크롤될 거리
-                ease: 'none', // 부드러운 스크롤 적용
-                scrollTrigger: {
-                    trigger: container,
-                    start: 'top top', // 스크롤이 시작하는 위치 (화면 상단과 요소 상단이 일치할 때)
-                    end: () => `+=${scrollDistance}`, // 스크롤이 끝나는 지점 (가로로 이동한 만큼 스크롤)
-                    scrub: 0.7, // 스크롤과 애니메이션 동기화
-                    pin: true,
-                },
-            }
-        );
+            // 기존 핀 애니메이션 삭제
+            ScrollTrigger.getById("horizontalScroll")?.kill();
+
+            // 새로운 핀 애니메이션 설정
+            gsap.fromTo(
+                container,
+                { translateX: 0 }, // 처음 상태 (왼쪽 끝에서 시작)
+                {
+                    translateX: -scrollDistance, // 스크롤될 거리
+                    ease: 'none',
+                    scrollTrigger: {
+                        id: "horizontalScroll",
+                        trigger: container,
+                        start: 'top top',
+                        end: () => `+=${scrollDistance}`,
+                        scrub: 0.7,
+                        pin: true,
+                        invalidateOnRefresh: true, // 화면 크기 변경 시 다시 계산
+                    },
+                }
+            );
+        };
+
+        // 초기 설정
+        setupScrollAnimation();
+
+        // resize 이벤트에 핸들러 추가
+        window.addEventListener('resize', setupScrollAnimation);
 
         return () => {
-            pin.kill();
+            // 컴포넌트 언마운트 시 이벤트 리스너 제거
+            window.removeEventListener('resize', setupScrollAnimation);
+            ScrollTrigger.getById("horizontalScroll")?.kill(); // 핀 애니메이션 정리
         };
     }, [ref]);
 

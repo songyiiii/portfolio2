@@ -8,7 +8,6 @@ export const ProjectsStyled = styled.div`
     position: relative;
     background-color: white;
     -ms-overflow-style: none;
-
     &::-webkit-scrollbar {
         display: none;
     }
@@ -16,5 +15,6 @@ export const ProjectsStyled = styled.div`
         display: flex;
         width: 200vw;
         height: 100%;
+        overflow-x: visible; 
     }
 `;
