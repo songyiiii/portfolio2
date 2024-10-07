@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProfileStyled = styled.div`
     background-color: white;
     padding: 0 20px;
-
+    height: 160vh;
     .parallax__item {
         height: 40vh;
         display: flex;
@@ -26,9 +26,9 @@ export const ProfileStyled = styled.div`
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.9); 
+            background-color: rgba(255, 255, 255, 1);
             color: black;
-            display: flex ;
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -36,11 +36,17 @@ export const ProfileStyled = styled.div`
             text-align: center;
             p {
                 margin-bottom: 20px;
-                padding: 10px;
+                padding: 10px 15px;
+                border-radius: 15px;
                 background-color: black;
                 color: white;
+                font-size: 1.2rem;
+                margin-right: 10px;
+                flex-wrap: wrap;
+                font-weight: bold;
                 span {
                     display: block;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -49,19 +55,17 @@ export const ProfileStyled = styled.div`
             left: 0; /* hover 시 content가 왼쪽에서 들어옴 */
         }
     }
-    .item2, .item3 {
+    /* .item2, .item3 {
         .content {
             flex-direction: column;
         }
-    }
-    .item1 ,.item4 {
+    } */
+    .item1,
+    .item4 {
         .content {
             p {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                background-color: black;
-                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
                 display: flex;
                 justify-content: center;
                 align-items: center;

@@ -10,6 +10,7 @@ const Section3_2 = ({ x, onMouseEnterLink, onMouseLeave }) => {
                     href={x.link}
                     onMouseEnter={onMouseEnterLink}
                     onMouseLeave={onMouseLeave}
+                    target='_blank'
                 >
                     <img src={x.img}></img>
                     <div className="title">{x.name}</div>

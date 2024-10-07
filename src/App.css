@@ -25,12 +25,6 @@
     font-weight: normal;
     font-style: normal;
 }
-.appWrap {
-    width: 1000px;
-    margin: auto;
-    text-align: center;
-    padding: 10px 0;
-}
 .cursor {
     width: 30px;
     height: 30px;

@@ -9,8 +9,6 @@ export const HeaderStyled = styled.div`
     padding: 10px 20px;
     color: white;
     mix-blend-mode: difference; /* 텍스트가 배경에 따라 색이 바뀜 */
-    /* font-family: 'HANBatang';
-    font-weight: bold; */
     a {
         color: inherit;
         text-decoration: none;
@@ -37,9 +35,8 @@ export const HeaderStyled = styled.div`
                 }
             }
             .active {
-                border-bottom: 1px solid white;
+                text-decoration: underline;
                 mix-blend-mode: difference;
-                
             }
         }
     }

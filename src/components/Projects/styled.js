@@ -8,7 +8,6 @@ export const ProjectsStyled = styled.div`
     position: relative;
     background-color: white;
     -ms-overflow-style: none;
-    margin-top: 50px;
 
     &::-webkit-scrollbar {
         display: none;

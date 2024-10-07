@@ -1,11 +1,13 @@
+import React from 'react';
 import { ProfileStyled } from './styled';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useEffect } from 'react';
+import { profileData } from '../../utill/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Profile = () => {
+const Profile = React.forwardRef((props, ref) => {
     useEffect(() => {
         const items = gsap.utils.toArray('.parallax__item');
 
@@ -52,7 +54,6 @@ const Profile = () => {
                         trigger: item,
                         start: 'top 70%',
                         end: 'bottom 20%',
-                        markers: true,
                         toggleActions: 'play reverse play reverse', // 스크롤을 올릴 때 다시 사라지도록 설정
                     },
                 }
@@ -67,12 +68,14 @@ const Profile = () => {
     }, []);
 
     return (
-        <ProfileStyled>
+        <ProfileStyled ref={ref}>
             <div className="parallax__item item1">
                 <h2>About me</h2>
                 <div className="content">
                     <p>한송이</p>
                     <p>1995.04.08</p>
+                    <p>ISTP</p>
+                    <p>서울시 서초구</p>
                 </div>
             </div>
             <div className="parallax__item item2">
@@ -83,10 +86,13 @@ const Profile = () => {
                         세무회계학과
                     </p>
                     <p>
+                        <span>2023.04 - 2023.06</span>
+                        sbs아카데미 웹퍼블리셔 과정
+                    </p>
+                    <p>
                         <span>2024.06 - </span>posco x codingOn 웹풀스택 13기
                     </p>
                 </div>
-              
             </div>
             <div className="parallax__item item3">
                 <h2>Career</h2>
@@ -117,6 +123,6 @@ const Profile = () => {
             </div>
         </ProfileStyled>
     );
-};
+});
 
 export default Profile;

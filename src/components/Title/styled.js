@@ -11,10 +11,10 @@ export const TitleStyled = styled.div`
     color: white;
     background-color: white;
     h1 {
-      font-size: 3rem;
+        font-size: 3rem;
     }
     h2 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
     .shine {
         background: linear-gradient(
@@ -33,11 +33,11 @@ export const TitleStyled = styled.div`
         display: inline-block;
     }
     @keyframes shine {
-    0% {
-      background-position: -200% 0;
+        0% {
+            background-position: -200% 0;
+        }
+        100% {
+            background-position: 200% 0;
+        }
     }
-    100% {
-      background-position: 200% 0;
-    }
-  }
 `;

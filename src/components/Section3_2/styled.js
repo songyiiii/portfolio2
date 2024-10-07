@@ -8,26 +8,26 @@ export const Section3_2Styled = styled.div`
     align-items: center;
     font-size: 24px;
     position: relative;
-    background-color: black;
+    background-color: white;
     .title {
         position: absolute;
         text-align: center;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         color: white;
         font-size: 5rem;
         z-index: 10;
         font-weight: bold;
+        text-shadow: 1px 1px 2px black;
     }
     .number {
         position: absolute;
         top: 15%;
         left: 80%;
-        transform: translate(-15%,-80%);
+        transform: translate(-15%, -80%);
         font-size: 4rem;
-        color: white;
-        font-weight:bold;
+        font-weight: bold;
         z-index: 1000;
     }
     .imgBox {
@@ -54,21 +54,19 @@ export const Section3_2Styled = styled.div`
                 }
             }
         }
-       
     }
     .textBox {
         position: absolute;
         bottom: 10%;
-        right: 0;
-        color: white;
+        right: 10%;
         p {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid black;
             line-height: 2;
             span {
                 margin-right: 13px;
             }
         }
-        }
+    }
     @media screen and (max-width: 480px) {
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {

@@ -8,8 +8,10 @@ justify-content: space-around;
 align-items: center;
 padding: 0 20px;
 background-color: white;
+a {
+    color: inherit;
+}
 h1 {
-
     font-size: 6rem;
     text-align: center;
     display: flex;

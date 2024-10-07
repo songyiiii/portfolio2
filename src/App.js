@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
-import {gsap} from 'gsap'
+import { act, useEffect, useState, useRef } from 'react';
+import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Title from './components/Title';
-import Project from './components/Section3';
+import Project from './components/Projects';
 import Contact from './components/Contact';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 function App() {
     //마우스의 x,y좌표를 저장할 상태 변수
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -20,6 +20,11 @@ function App() {
     const [text, setText] = useState('');
     //섹션에 따라 헤더의 메뉴스타일을 업데이트할 상태변수 (아직 미사용)
     const [activeSection, setActiveSection] = useState('');
+    // console.log(activeSection,'액티브')
+
+    const profileRef = useRef(null);
+    const projectRef = useRef(null);
+    const contactRef = useRef(null);
 
     useEffect(() => {
         let animationFrameId;
@@ -37,30 +42,36 @@ function App() {
         };
     }, []);
 
-
-    //아직 미사용 
+    //아직 미사용
     useEffect(() => {
         ScrollTrigger.create({
-            trigger:'.profile',
-            start:'top 50%',
-            end:'bottom 50%',
+            trigger: profileRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
             onEnter: () => setActiveSection('about'),
             onLeaveBack: () => setActiveSection(''), // Profile 섹션을 벗어나면 초기화
-        })
+            // markers:true
+        });
         ScrollTrigger.create({
-            trigger: '.section3', // Section3 섹션의 클래스
-            start: 'top 50%',
-            end: 'bottom 50%',
+            trigger: projectRef.current, // Section3 섹션의 클래스
+            start: 'top top',
+            end: 'bottom bottom',
             onEnter: () => setActiveSection('project'), // Section3이 뷰포트에 들어오면 project 메뉴 활성화
             onLeaveBack: () => setActiveSection(''), // Section3 섹션을 벗어나면 초기화
+        });
+        ScrollTrigger.create({
+            trigger: contactRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
+            onEnter: () => setActiveSection('contact'),
+            onLeaveBack: () => setActiveSection(''),
         });
         return () => {
             ScrollTrigger.killAll(); // 컴포넌트 언마운트 시 ScrollTrigger 정리
         };
-    },[])
+    }, []);
 
-
-    //링크위로 마우스가 들어오면 hover상태를 true로 업데이트, text에 view라는 텍스트를 추가 
+    //링크위로 마우스가 들어오면 hover상태를 true로 업데이트, text에 view라는 텍스트를 추가
     //커서에 텍스트가 나타나게함
     const handleMouseEnterLink = () => {
         setHover(true);
@@ -78,7 +89,6 @@ function App() {
         setText('');
     };
 
-
     return (
         <div>
             <div
@@ -90,13 +100,30 @@ function App() {
             <Header
                 onMouseEnterText={handleMouseEnterText}
                 onMouseLeave={handleMouseLeave}
+                activeSection={activeSection}
+                scrollToSection={(section) => {
+                    if (section === 'about' && profileRef.current) {
+                        profileRef.current.scrollIntoView({
+                            behavior: 'smooth',
+                        });
+                    }
+                    if (section === 'project' && projectRef.current) {
+                        projectRef.current.scrollIntoView({
+                            behavior: 'smooth',
+                        });
+                    }
+                    if (section === 'contact' && contactRef.current) {
+                        contactRef.current.scrollIntoView({
+                            behavior: 'smooth',
+                        });
+                    }
+                }}
             />
             <Title />
-            <Profile />
-            <Project />
-            <Contact />
+            <Profile ref={profileRef} />
+            <Project ref={projectRef} />
+            <Contact ref={contactRef} />
             <Footer />
-            
         </div>
     );
 }
