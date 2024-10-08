@@ -5,7 +5,7 @@
 
 + 프로젝트 기간: 
   
-+ 링크:
++ 링크:http://3.35.3.173:3000
 
 
 + skills
@@ -14,3 +14,5 @@
   ![HTML5](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   ![HTML5](	https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
   ![HTML5](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+
