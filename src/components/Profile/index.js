@@ -9,13 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Profile = React.forwardRef((props, ref) => {
     useEffect(() => {
+        //about, education, career, skills항목
         const items = gsap.utils.toArray('.parallax__item');
 
         // 각 아이템에 대해 애니메이션 설정
         items.forEach((item) => {
             const h2 = item.querySelector('h2'); // 각 섹션의 h2 요소
 
-            // h2 텍스트를 한 글자씩 <span>으로 감싸기
+            // h2 텍스트를 한 글자씩 <span>으로 감싸고 h2요소에 다시 추가
             const text = h2.textContent;
             h2.innerHTML = ''; // 기존 텍스트 제거
             text.split('').forEach((char) => {
@@ -43,10 +44,10 @@ const Profile = React.forwardRef((props, ref) => {
             // opacity 애니메이션
             gsap.fromTo(
                 item,
-                { autoAlpha: 0, x: 100, y: 0 },
+                { autoAlpha: 0, x: 100, y: 0 }, //오른쪽100px에서
                 {
                     autoAlpha: 1,
-                    x: 0,
+                    x: 0, //왼쪽0으로 이동하면서 나타나게
                     y: 0,
                     duration: 0.8,
                     ease: 'expo',
@@ -54,11 +55,10 @@ const Profile = React.forwardRef((props, ref) => {
                         trigger: item,
                         start: 'top 70%',
                         end: 'bottom 20%',
-                        toggleActions: 'play reverse play reverse', // 스크롤을 올릴 때 다시 사라지도록 설정
+                        toggleActions: 'play reverse play reverse', // 스크롤 위치에 따라 애니메이션이 반대로 작동하도록
                     },
                 }
             );
-            item.style.opacity = '0';
         });
 
         // cleanup: 컴포넌트가 언마운트될 때 ScrollTrigger 제거

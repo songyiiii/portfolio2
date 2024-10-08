@@ -66,6 +66,9 @@ function App() {
             <Header
                 onMouseEnterText={handleMouseEnterText}
                 onMouseLeave={handleMouseLeave}
+                //섹션이라는 매개변수를 받음
+                //각 섹션이 null이 아닌 경우 scrollIntoView 메서드를 호출해 해당 섹션으로 스크롤
+                //scrollIntoView: 특정 요소가 화면에 보이도록 스크롤을 이동
                 scrollToSection={(section) => {
                     if (section === 'about' && profileRef.current) {
                         profileRef.current.scrollIntoView({
