@@ -16,7 +16,14 @@
   ![HTML5](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 
-  # 페이지 설명
+# 페이지 설명
+
+
+### [header]
+<img src="https://github.com/user-attachments/assets/28a064e5-9dc6-4109-918e-adc6d5124dbc" width="600">
+
+
++ Header 메뉴를 클릭하면 해당 섹션의  scrollIntoView 메서드를 활용해 부드럽게 스크롤 이동되도록 구현
 
 ### [title]
 <img src="https://github.com/user-attachments/assets/6082a58a-fc35-4e15-a276-1e4901987348" width="600">
