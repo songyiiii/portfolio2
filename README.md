@@ -41,7 +41,7 @@
 
 
 ### [project]
-<img src="https://github.com/user-attachments/assets/c7ca5ae2-413f-4fd5-ab24-e9692dc67fea" width="600">
+<img src="https://github.com/user-attachments/assets/ed27ec23-82eb-463f-a3f7-fe5d4f7a1822" width="600">
 
 
 + gsap과 ScrollTrigger의 create()메서드를 이용해 프로젝트 목록이 스크롤에 따라 가로로 이동하며 애니메이션이 실행
