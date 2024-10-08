@@ -30,9 +30,7 @@ export const HeaderStyled = styled.div`
             width: 85%;
 
             li {
-                a {
-                    padding: 10px 40px;
-                }
+                padding: 10px 40px;
             }
             .active {
                 text-decoration: underline;
@@ -48,9 +46,7 @@ export const HeaderStyled = styled.div`
                 display: block;
                 li {
                     margin-bottom: 10px;
-                    a {
-                        padding: 0;
-                    }
+                    padding: 0;
                 }
             }
         }
@@ -63,9 +59,7 @@ export const HeaderStyled = styled.div`
                 display: block;
                 li {
                     margin-bottom: 10px;
-                    a {
-                        padding: 0;
-                    }
+                    padding: 0;
                 }
             }
         }

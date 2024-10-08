@@ -1,6 +1,5 @@
 import arts1 from '../image/arts1.png';
 import auction from '../image/auction.png'
-import auctionlogo from '../image/logo.png'
 
 const project = [
     {

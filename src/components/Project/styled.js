@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Section3_2Styled = styled.div`
+export const ProjectStyled = styled.div`
     width: 100vw;
     height: 100%;
     display: flex;

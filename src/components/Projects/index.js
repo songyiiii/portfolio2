@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { project } from '../../utill/data';
 import { ProjectsStyled } from './styled';
-import Section3_2 from '../Section3_2';
+import Project from '../Project'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,7 +56,7 @@ const Projects = React.forwardRef(({ onMouseLeave, onMouseEnterLink }, ref) => {
         <ProjectsStyled ref={ref}>
             <div className="horizontalScrollContent">
                 {project?.map((x, i) => (
-                    <Section3_2
+                    <Project
                         x={x}
                         key={i}
                         onMouseEnterLink={onMouseEnterLink}

@@ -1,8 +1,8 @@
-import { Section3_2Styled } from './styled';
+import { ProjectStyled } from './styled';
 
-const Section3_2 = ({ x, onMouseEnterLink, onMouseLeave }) => {
+const Project = ({ x, onMouseEnterLink, onMouseLeave }) => {
     return (
-        <Section3_2Styled>
+        <ProjectStyled>
             <div className="number">{x.id}</div>
             <div className="title">
                 <p>{x.name}</p>
@@ -14,8 +14,9 @@ const Section3_2 = ({ x, onMouseEnterLink, onMouseLeave }) => {
                     onMouseEnter={onMouseEnterLink}
                     onMouseLeave={onMouseLeave}
                     target="_blank"
+                    rel="noreferrer"
                 >
-                    <img src={x.img}></img>
+                    <img src={x.img} alt='프로젝트 이미지'></img>
                 </a>
             </div>
             <div className="textBox">
@@ -25,7 +26,7 @@ const Section3_2 = ({ x, onMouseEnterLink, onMouseLeave }) => {
                     })}
                 </p>
             </div>
-        </Section3_2Styled>
+        </ProjectStyled>
     );
 };
-export default Section3_2;
+export default Project;

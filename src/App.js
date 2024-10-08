@@ -1,5 +1,5 @@
 import './App.css';
-import {  useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Header from './components/Header';
@@ -17,20 +17,16 @@ function App() {
     const [hover, setHover] = useState(false);
     //링크 위에 마우스를 올렸을때 나타나는 텍스트
     const [text, setText] = useState('');
-    //섹션에 따라 헤더의 메뉴스타일을 업데이트할 상태변수 (아직 미사용)
-    const [activeSection, setActiveSection] = useState('');
-    // console.log(activeSection,'액티브')
 
     const profileRef = useRef(null);
     const projectRef = useRef(null);
     const contactRef = useRef(null);
 
     useEffect(() => {
-        let animationFrameId;
         const handleMouseMove = (e) => {
             //requestAnimationFrame을 이용하여 마우스가 이동할때 성능을 최적하여 상태를 업데이트함
             //애니메이션이 부드럽게 작동됨
-            animationFrameId = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
                 setPosition({ x: e.clientX, y: e.clientY });
             });
         };
@@ -70,7 +66,6 @@ function App() {
             <Header
                 onMouseEnterText={handleMouseEnterText}
                 onMouseLeave={handleMouseLeave}
-                activeSection={activeSection}
                 scrollToSection={(section) => {
                     if (section === 'about' && profileRef.current) {
                         profileRef.current.scrollIntoView({
@@ -91,7 +86,11 @@ function App() {
             />
             <Title />
             <Profile ref={profileRef} />
-            <Project ref={projectRef} handleMouseEnterLink={handleMouseEnterLink} handleMouseLeave={handleMouseLeave}/>
+            <Project
+                ref={projectRef}
+                handleMouseEnterLink={handleMouseEnterLink}
+                handleMouseLeave={handleMouseLeave}
+            />
             <Contact ref={contactRef} />
             <Footer />
         </div>

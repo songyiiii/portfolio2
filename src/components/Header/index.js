@@ -9,7 +9,7 @@ const Header = ({
     return (
         <HeaderStyled>
             <nav>
-                <div className="logo"> 
+                <div className="logo">
                     <a
                         href="/"
                         onMouseEnter={onMouseEnterText}
@@ -22,38 +22,26 @@ const Header = ({
                     <li
                         className={activeSection === 'about' ? 'active' : ''}
                         onClick={() => scrollToSection('about')}
+                        onMouseEnter={onMouseEnterText}
+                        onMouseLeave={onMouseLeave}
                     >
-                        <a
-                            href="#"
-                            onMouseEnter={onMouseEnterText}
-                            onMouseLeave={onMouseLeave}
-                        >
-                            ABOUT
-                        </a>
+                        ABOUT
                     </li>
                     <li
                         onClick={() => scrollToSection('project')}
                         className={activeSection === 'project' ? 'active' : ''}
+                        onMouseEnter={onMouseEnterText}
+                        onMouseLeave={onMouseLeave}
                     >
-                        <a
-                            href="#"
-                            onMouseEnter={onMouseEnterText}
-                            onMouseLeave={onMouseLeave}
-                        >
-                            PROJECT
-                        </a>
+                        PROJECT
                     </li>
                     <li
                         onClick={() => scrollToSection('contact')}
                         className={activeSection === 'contact' ? 'active' : ''}
+                        onMouseEnter={onMouseEnterText}
+                        onMouseLeave={onMouseLeave}
                     >
-                        <a
-                            href="#"
-                            onMouseEnter={onMouseEnterText}
-                            onMouseLeave={onMouseLeave}
-                        >
-                            CONTACT
-                        </a>
+                        CONTACT
                     </li>
                 </ul>
             </nav>
