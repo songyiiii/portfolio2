@@ -18,12 +18,26 @@
 
   # 페이지 설명
 
-### [메인페이지]
+### [title]
+<img src="https://github.com/user-attachments/assets/6082a58a-fc35-4e15-a276-1e4901987348" width="600">
 
-![main](https://github.com/user-attachments/assets/6082a58a-fc35-4e15-a276-1e4901987348)
-+ 텍스트에 linear-gradient으로 그라데이션 배경과 -webkit-background-clip: text를 적용하여 그라데이션 효과가 나타나도록 하고,
 
-![about](https://github.com/user-attachments/assets/e26a5d12-b619-41f8-ae22-44f7ff316366)
++ 텍스트를 그라데이션 배경으로 설정하고 -webkit-background-clip: text를 사용하여 텍스트 자체에만 그라데이션이 표시
++ 배경의 시작 위치를 -200%에서 끝 위치인 200%로 이동시켜, 빛이 텍스트를 가로질러 흐르는 듯한 시각적 효과를 연출
+
+### [about]
+<img src="https://github.com/user-attachments/assets/e26a5d12-b619-41f8-ae22-44f7ff316366" width="600">
+
+
 + gsap과 ScrollTrigger를 사용해 특정 영역이 화면에 나타날때마다 텍스트 색상을 검정에서 흰색으로 변환
 + 각 섹션을 hover시 컨텐트항목이 왼쪽에서 오른쪽으로 슬라이드하여 나타나는 효과 적용
+
+
+### [project]
+<img src="https://github.com/user-attachments/assets/c7ca5ae2-413f-4fd5-ab24-e9692dc67fea" width="600">
+
+
++ gsap과 ScrollTrigger의 create()메서드를 이용해 프로젝트 목록이 스크롤에 따라 가로로 이동하며 애니메이션이 실행
+
+
 
