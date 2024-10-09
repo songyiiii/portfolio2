@@ -91,10 +91,15 @@ function App() {
             <Profile ref={profileRef} />
             <Project
                 ref={projectRef}
-                handleMouseEnterLink={handleMouseEnterLink}
-                handleMouseLeave={handleMouseLeave}
+                onMouseEnterLink={handleMouseEnterLink}
+                onMouseLeave={handleMouseLeave}
             />
-            <Contact ref={contactRef} />
+            <Contact
+                ref={contactRef}
+                onMouseEnterLink={handleMouseEnterLink}
+                onMouseEnterText={handleMouseEnterText}
+                onMouseLeave={handleMouseLeave}
+            />
             <Footer />
         </div>
     );

@@ -110,13 +110,10 @@ const Profile = React.forwardRef((props, ref) => {
                 <h2>Skills</h2>
                 <div className="content">
                     <p>Node.js</p>
+                    <p>Express</p>
                     <p>React</p>
                     <p>TypeScript</p>
                     <p>Next.js</p>
-                    <p>matter.js</p>
-                    <p>GSAP</p>
-                    <p>Swiper</p>
-                    <p>Ant Design</p>
                     <p>MySql</p>
                     <p>aws</p>
                 </div>
