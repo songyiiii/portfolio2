@@ -1,9 +1,20 @@
 import arts1 from '../image/arts1.png';
 import auction from '../image/auction.png'
+import owl from '../image/owl.png'
 
 const project = [
     {
         id: '01',
+        name: 'Arts',
+        img: arts1,
+        personnel: '1인 프로젝트',
+        period: '2 weeks',
+        info: '미술상품 온라인 거래 플랫폼',
+        tag: ['react', 'next.js', 'typescript', 'styled-components'],
+        link:'http://3.38.151.32:3000/'
+    },
+    {
+        id: '02',
         name: 'Auction Chance',
         img: auction,
         personnel: '4인 프로젝트',
@@ -13,15 +24,16 @@ const project = [
         link: 'http://43.203.118.59/',
     },
     {
-        id: '02',
-        name: 'Arts',
-        img: arts1,
-        personnel: '1인 프로젝트',
-        period: '2 weeks',
-        info: '미술상품 온라인 거래 플랫폼',
-        tag: ['react', 'next.js', 'typescript', 'styled-components'],
-        link:'http://3.38.151.32:3000/'
+        id: '03',
+        name: 'OWL Airline',
+        img: owl,
+        personnel: '3인 프로젝트',
+        period: '1 weeks',
+        info:   '항공사 웹페이지',
+        tag: ['html', 'javascript', 'css'],
+        link: 'http://hansongyi43.dothome.co.kr/CodinOnproject/html/',
     },
+
 ];
 
 const profileData = [

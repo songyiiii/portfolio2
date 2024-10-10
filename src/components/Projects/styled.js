@@ -13,7 +13,7 @@ export const ProjectsStyled = styled.div`
     }
     .horizontalScrollContent {
         display: flex;
-        width: 200vw;
+        width: 300vw;
         height: 100%;
         overflow-x: visible; 
     }
