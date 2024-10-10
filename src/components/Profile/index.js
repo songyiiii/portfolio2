@@ -109,11 +109,15 @@ const Profile = React.forwardRef((props, ref) => {
             <div className="parallax__item item4">
                 <h2>Skills</h2>
                 <div className="content">
+                    <p>HTML</p>
+                    <p>javascript</p>
+                    <p>css</p>
                     <p>Node.js</p>
-                    <p>Express</p>
+                    <p>Express.js</p>
                     <p>React</p>
                     <p>TypeScript</p>
                     <p>Next.js</p>
+                    <p>styled-components</p>
                     <p>MySql</p>
                     <p>aws</p>
                 </div>

@@ -67,6 +67,7 @@ export const ProjectStyled = styled.div`
     @media screen and (max-width: 480px) {
         .projectInfo {
             font-size: 1.3rem;
+            margin-top: 100px;
         }
         .textBox {
             p {
@@ -86,11 +87,12 @@ export const ProjectStyled = styled.div`
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {
         .projectInfo {
-            font-size: 2rem;
+            margin-top: 45px;
+            font-size: 1.7rem;
         }
         .textBox {
             p {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
         }
         .imgBox {

@@ -82,6 +82,8 @@ export const ProfileStyled = styled.div`
             .content {
                 p {
                     font-size: 0.8rem;
+                    margin-bottom: 5px;
+                    padding: 5px 10px;
                 }
             }
         }
