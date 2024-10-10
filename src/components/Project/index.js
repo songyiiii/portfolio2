@@ -3,11 +3,13 @@ import { ProjectStyled } from './styled';
 const Project = ({ x, onMouseEnterLink, onMouseLeave }) => {
     return (
         <ProjectStyled>
-            <div className="number">{x.id}</div>
-            <div className="title">
-                <p>{x.name}</p>
-                <p>{x.info}</p>
+            <div className='projectInfo'>
+                <div className="title">
+                    <p>{x.name}</p>
+                    <p>{x.info}</p>
+                </div>
             </div>
+
             <div className="imgBox">
                 <a
                     href={x.link}
@@ -16,7 +18,7 @@ const Project = ({ x, onMouseEnterLink, onMouseLeave }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <img src={x.img} alt='프로젝트 이미지'></img>
+                    <img src={x.img} alt="프로젝트 이미지"></img>
                 </a>
             </div>
             <div className="textBox">

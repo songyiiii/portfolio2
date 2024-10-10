@@ -18,6 +18,8 @@ export const ProfileStyled = styled.div`
         h2 {
             font-size: 5rem;
             -webkit-text-stroke: 1px white;
+            display: flex;
+            align-items: center;
         }
 
         .content {
@@ -79,7 +81,7 @@ export const ProfileStyled = styled.div`
             }
             .content {
                 p {
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
                 }
             }
         }
